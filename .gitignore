@@ -1,0 +1,14 @@
+*.txt
+*.tex
+*.class
+*.aux
+*.blg
+*.log
+*.out
+*.toc
+*.xtex
+*.py
+*.bu
+*Seminar*
+*Term*
+ScoreSolver.java
