@@ -1,0 +1,159 @@
+1. Hva ligger i index 2 i arrayen?
+
+class Kahoot {
+    public static void main(String[] args){
+	    String[] ord = {"Hei", "paa", "deg", "Arne"};
+    }
+}
+
+Svaralternativ:
+A: Arne (0)
+B: deg  (3)
+C: paa  (7)
+D: Hei  (3)
+
+Svaret er 'B: deg' -- Indeks starter å telle fra null. Ved å skrive ut arrayen som vist i seminartimen får vi:
+[0]=Hei
+[1]=paa
+[2]=deg
+[3]=Arne
+
+2. Hvor mange ganger skrives "Fjodor"?
+class Kahoot {
+    public static void main(String[] args) {
+	    int teller = 0;
+
+        while(teller < 10) {
+		    System.out.println("Fjodor");
+        }
+    }
+}
+
+Svaralternativ:
+A:  9 (6)
+B: 12 (0)
+C: 10 (7)
+D: 11 (0)
+
+Svaret er 'C: 10' -- siden 'teller' starter med 0 vil det ta ti økninger med 1 før telleren er 10, og kondisjonen teller < 10 ikke lenger er gyldig.
+
+3. Hvor mange ganger skrives "Cliff Kåre"?
+
+class Kahoot {
+    public static void main(String[] args) {
+	    int teller = 10;
+
+        while (teller < 0) {
+		    System.out.println("Cliff Kåre");
+        }
+    }
+}
+
+Svaralternativ:
+A:  5 (1)
+B: 15 (0)
+C:  0 (9)
+D: 10 (3)
+
+Svaret er 'C: 0' -- kondisjonen 'teller < 0' er aldri sann, og while loopen skjer aldri.
+
+4. Hva inneholder "tall" etter endt kjøring?
+
+
+class Kahoot {
+    public static void main(String[] args) {
+	    int teller = 0;
+		int[] tall = new int[3];
+
+        while(teller < 3) {
+		    tall[teller] = teller+5;
+			teller++;
+        }
+    }
+}
+
+Svaralternativ:
+A: {0,1,2} ( 0)
+B: {1,2,3} ( 0)
+C: {5,6,7} (11)
+D: {4,5,6} ( 2)
+
+Svaret er 'C: {5,6,7}' -- når teller er 0 blir tall[0] = 0 + 5, som er {5}, og når teller øker en for hver gang blir det da:
+tall[1] = 1 + 5; // = 6
+tall[2] = 2 + 5; // = 7
+som gir {5,6,7}
+
+5. Hvor langt er skøyteløpet?
+
+class Kahoot {
+    public static void main(String[] args) {
+	    int runder = 10;
+		int lengde = 0;
+
+        while (runder > 0) {
+            lengde = lengde + 400;
+        	runder--;
+        }
+		System.out.println("Total lengde: " + lengde);
+    }
+}
+
+Svaralternativ:
+A: 3600 (0)
+B: 8000 (1)
+C: 4000 (6)
+D: 4400 (1)
+
+Svaret er 'C: 4000' -- siden runder starter på 10, så vil det ta 10 synkinger før runder når 0 og betingelsen 'runder > 0' ikke lenger er sann. Samtidig økes lengden med den forrige lengdeverdien og 400. Matematisk blir det '400 * 10 == 4000';
+
+6. Hva ligger i arrayen etter endt kjøring? (ekstra tid!)
+
+class Kahoot {
+    public static void main(String[] args) {
+	    String[] tekst = {"Hei", "jeg", "heter", "Donald"};
+		tekst[2] = "Bjarne";
+		tekst[1] = "con";
+		tekst[0] = "Arne";
+		if (tekst[0].equals("Bjarne")) {
+		    tekst[2] = "Carne";
+			tekst[3] = "Havreflarne";
+        } else {
+		    tekst[3] = "Swaggins";
+			tekst[0] = "Kjell";
+			tekst[2] = "Yolo";
+			tekst[1] = "Mc";		
+        }
+	}
+}
+
+Svaralternativ:
+A: {"Kjell", "Mc", "Yolo", "Swaggins"} (9)
+B: {"Hei", "jeg", "heter", "Donald"} (3)
+C: {"Arne", "con", "Bjarne", "Havreflarne"} (2)
+D: {"Kjell", "Inge", "Binge", "Røkke"} (0)
+
+Svaret er 'A: {"Kjell", "Mc", "Yolo", "Swaggins"}' -- før if-testen endres en del variable så 'tekst' ser såher ut:
+{"Arne", "con", "Bjarne", "Donald"}
+på if-testen blir da: "Arne".equals("Bjarne") testet, og det er false, så 'else' vil kjøre.
+Da endres alle fire posisjoner til å bli resultatet.
+
+7. Hva skrives ut her?
+class Kahoot {
+    public static void main(String[] args) {
+	    int[] a = {1, 2, 3, 4, 5, 6, 7, 8};
+		int teller = 2;
+		
+		while (teller < 4 ) {
+	        System.out.println(a[teller] + ", ");
+			teller++;
+		}
+    }
+}
+
+Svaralternativ:
+A: 1, 2, 3, 4, 5, 6, 7, 8,
+B: 2, 3, 4,
+C: 2, 3, 4, 5,
+D: 3, 4,
+
+Svaret er 'D: 3, 4, ' -- fordi teller begynner på 2, og tallet på indeks 2 er 3, og vi skriver kun ut så lenge teller < 4, som er 2 ganger (når den er 2 og når den er 3)
