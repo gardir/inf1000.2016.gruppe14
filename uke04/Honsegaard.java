@@ -12,18 +12,21 @@ public class Honsegaard {
 		println("Hvor mange hoenere er det?");
 		int hoener = Integer.parseInt(tastatur.nextLine());
 
-//		println("Kommer reven?");
+		// Versjonen ved at man henter foerste input _i_ while loekka
 		String revenKom ="";
 
+		// Hent input og sjekk at input er OK
+		// Merk at det er litt motsatt, vi sjekker at de er false, for det tilsvarer at brukeren ikke tastet et av tilfellene vi vil ha.
 		while (revenKom.equals("ja") == false && revenKom.equals("nei") == false) {
 				println("Kommer reven?");
 				revenKom = tastatur.nextLine();
 		}
 
+		// Versjonen ved at man henter foerste input _foer_ while loekka
 		println("Sover bonden?");
 		String bondenSover = tastatur.nextLine();
 
-		
+		// Sjekk at input er OK, hvis ikke hent ny til input er OK
 		while (bondenSover.equals("ja") == false && bondenSover.equals("nei") == false) {
 				println("Svar enten 'ja' eller 'nei'. Sover bonden?");
 				bondenSover = tastatur.nextLine();
