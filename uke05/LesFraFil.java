@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 public class LesFraFil {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		Scanner innfil = new Scanner(new File("filnavn"));
+		Scanner innfil = new Scanner(new File("filnavn.txt"));
 		int antallJa = 0;
 		while (innfil.hasNextLine()) {
 //			System.out.println(innfil.nextLine());
