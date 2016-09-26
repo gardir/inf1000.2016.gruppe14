@@ -33,7 +33,8 @@ public class Seminaroppgaver {
 		  4
 		  5
 		 */
-		for (int i=1; i<=5; i++) {
+		int i;
+		for (i=1; i<=5; i++) {
 
 			System.out.println(i);
 		}
