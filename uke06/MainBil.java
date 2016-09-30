@@ -2,7 +2,7 @@ public class MainBil {
 
 	public static void main(String[] args) {
 
-		// antar utslipp er stort og vekt er i kg
+		// antar utslipp er et eller annet pr. aar og vekt er i kg
 		Bil bilnavn = new Bil("Blaa", "318", 5000, 1300);
 
 		Bil fiestaen = new Bil("Roed", "Fiesta", 1300, 950);
@@ -16,6 +16,9 @@ public class MainBil {
 		
 	}
 
+	/*
+	 * Metoden skriver ut informasjon om bilen
+	 */
 	public static void skrivUtBil(Bil bilen) {
 		System.out.println("Bilen " + bilen.hentModell()
 		                   + " er " + bilen.hentFarge()

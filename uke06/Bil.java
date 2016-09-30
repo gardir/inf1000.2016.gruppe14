@@ -17,6 +17,11 @@ public class Bil {
 	private double utslipp;
 	private int vekt;
 
+	/*
+	 * Konstruktoeren.
+	 * Den lagrer verdiene i parameterene
+	 * til sine egne instansvariable
+	 */
 	public Bil(String fargen,
 	           String modellen,
 	           double utslippet,
@@ -27,6 +32,8 @@ public class Bil {
 		vekt = vekten;
 	}
 
+	// Hent-metoder som gir tilbake egenskapene
+	
 	public String hentFarge() {
 		return farge;
 	}
