@@ -1,12 +1,8 @@
 /*
 Skriv en klasse Bil. En bil har følgende egenskaper:
-
 • String farge
-
 • String modell
-
 • double utslipp
-
 • int vekt
 
 Lag en konstruktør, samt metoder for å hente ut data fra hver variabel.
