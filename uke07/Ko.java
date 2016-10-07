@@ -6,10 +6,18 @@ public class Ko {
 
 	public static void main(String[] args) {
 //		ko = new ArrayList<Person>();
+		
+
+//		seminarGjgangKoen();
+		seminarOppgKoen();
+		
+	}
+
+	private static void seminarGjgangKoen() {
 		Person p1 = new Person("Mathias");
 		Person p2 = new Person("Ida");
 		Person p3 = new Person("Nicolai");
-
+		
 		ko.add(p1);
 		skrivUtKoAntall(ko);
 		ko.add(p2);
@@ -21,10 +29,21 @@ public class Ko {
 		skrivUtKoAntall(ko);
 		skrivUtKoForEach(ko);
 
-		fjernHeleKoen();
-		
+		fjernHeleKoen();		
 	}
 
+	private static void seminarOppgKoen() {
+		Person p1 = new Person("Mathias");
+		Person p2 = new Person("Mathias");
+		
+		ko.add(p1);
+		System.out.println(ko.indexOf(p2));
+		
+		ArrayList<String> tekstKo = new ArrayList<String>();
+		tekstKo.add("Test");
+		System.out.println(tekstKo.indexOf("Test"));
+	}
+	
 	private static void skrivUtKoAntall(ArrayList<Person> ko) {
 		System.out.println("Koen bestaar naa av " + ko.size() + " person(er)");
 	}
