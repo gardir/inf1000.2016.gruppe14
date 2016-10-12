@@ -7,25 +7,35 @@ public class Ko {
 	public static void main(String[] args) {
 //		ko = new ArrayList<Person>();
 		
-
-//		seminarGjgangKoen();
+		seminarGjgangKoen();
+		System.out.println(); // newline
 		seminarOppgKoen();
 		
 	}
 
 	private static void seminarGjgangKoen() {
+		/*
+		 * Her legger vi folk til / fra koen for aa vise
+		 * hvordan en arraylist endrer posisjon/index
+		 * etterhvert som det blir lag til/fjernet
+		 * elementer
+		 */
 		Person p1 = new Person("Mathias");
 		Person p2 = new Person("Ida");
 		Person p3 = new Person("Nicolai");
-		
+
+		System.out.println("Legger til " + p1);
 		ko.add(p1);
 		skrivUtKoAntall(ko);
+		System.out.println("Legger til " + p2);
 		ko.add(p2);
+		System.out.println("Legger til " + p3);
 		ko.add(p3);
 		skrivUtKoAntall(ko);
 		skrivUtKoForEach(ko);
 		System.out.println(); // newline
-		ko.remove(0);
+		// remove fjerner _OG_ gir tilbake (return) det fjerna elementet
+		System.out.println("Ekspederer " + ko.remove(0));
 		skrivUtKoAntall(ko);
 		skrivUtKoForEach(ko);
 
@@ -33,15 +43,30 @@ public class Ko {
 	}
 
 	private static void seminarOppgKoen() {
+		/*
+		 * Her har jeg proevd aa illustrere
+		 * _hvordan_ indexof egentlig fungerer.
+		 * Legg merke til at Person instanser
+		 * _ikke_ vil finnes selv om de "ser"
+		 * like ut, ettersom det er to forskjellige
+		 * new-calls og dermed to forskjellige
+		 * instanser
+		 */
 		Person p1 = new Person("Mathias");
 		Person p2 = new Person("Mathias");
 		
 		ko.add(p1);
-		System.out.println(ko.indexOf(p2));
-		
+		System.out.println("Har p1 samme plass som p2? (-1 er nei): " + ko.indexOf(p2));
+
+		/*
+		 * Derimot er _String_ spesiell, selv om det er instans
+		 * kan det av-og-til være at javac skjønner at det
+		 * er samme String, men det er ikke garantert.
+		 * Naar jeg kjoerte programmet her saa faar jeg '0'
+		 */
 		ArrayList<String> tekstKo = new ArrayList<String>();
 		tekstKo.add("Test");
-		System.out.println(tekstKo.indexOf("Test"));
+		System.out.println("Har 'Test' samme plass som 'Test'? (-1 er nei): " + tekstKo.indexOf("Test"));
 	}
 	
 	private static void skrivUtKoAntall(ArrayList<Person> ko) {
