@@ -3,7 +3,16 @@ import java.util.ArrayList;
 
 public class Oppskrift {
 
-	private HashMap<String, String> ingredienser = new HashMap<String, String>();
+	/**
+	 * Innser i ettertid at HashMap<String, String> er tullete - ettersom
+	 * at har man String'en som man skal hente, saa er det ingen vits i aa
+	 * ha en hashmap aa hente stringen fra!
+	 * Dere vil senere laere "bedre" implementasjoner for saa her tullete loesninger,
+	 * men for naa bruk ArrayList<String> slik jeg har endret koden til.
+	 * Takk til studentene som spurte!
+	 */
+//	private HashMap<String, String> ingredienser = new HashMap<String, String>();
+	private ArrayList<String> ingredienser = new ArrayList<String>();
 	private ArrayList<String> oppskriftstekst = new ArrayList<String>();
 	private String tittel;
 
@@ -20,7 +29,8 @@ public class Oppskrift {
 	}
 
 	public void leggTilIngrediens(String ingrediens) {
-		ingredienser.put(ingrediens, ingrediens);
+//		ingredienser.put(ingrediens, ingrediens);
+		ingredienser.add(ingrediens);
 	}
 
 	public void leggTilOppskriftslinje(String linje) {
@@ -28,7 +38,12 @@ public class Oppskrift {
 	}
 
 	public void skrivUtAlleIngredienser() {
+		/*
 		for (String ingrediens : ingredienser.values()) {
+			System.out.println(ingrediens);
+		}
+		*/
+		for (String ingrediens : ingredienser) {
 			System.out.println(ingrediens);
 		}
 	}
