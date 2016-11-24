@@ -15,3 +15,5 @@ ScoreSolver.java
 kahootresultat/*
 uke08/*
 uke10/.ignore/*
+# Repetisjonskursfiler
+*.rep
